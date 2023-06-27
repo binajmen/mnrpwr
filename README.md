@@ -14,7 +14,7 @@ It is a highly opiniated proof of concept. Use it at your own risk.
 
 - [x] Deploy on fly manually
 - [ ] CI flow
-– [ ] Use Drizzle Kit to migrate
+- [ ] Use Drizzle Kit to migrate
 
 ### Deploy on fly
 
