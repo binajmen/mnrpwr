@@ -9,7 +9,7 @@ import morgan from "morgan";
 import usersRouter from "./routes/users";
 
 const app = express();
-const port = 8080;
+const port = process.env.PORT ?? 8080;
 
 // middlewares
 app.use(cors());

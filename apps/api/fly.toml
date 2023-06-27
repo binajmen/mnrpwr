@@ -1,13 +1,7 @@
-# fly.toml app configuration file generated for monito-api on 2023-06-26T19:32:06+02:00
-#
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
 
-app = "monito-api"
+app = "monorepowered-api"
 primary_region = "ams"
-
-#[deploy]
-#  release_command = "bin/rails db:prepare"
 
 [env]
   PORT = "8080"
