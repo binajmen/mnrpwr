@@ -6,7 +6,7 @@ import express from "express";
 import helmet from "helmet";
 import morgan from "morgan";
 
-// import users from "./routes/users";
+import usersRouter from "./routes/users";
 
 const app = express();
 const port = 8080;
@@ -19,10 +19,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // routes
-// app.use("/users", users);
+app.use("/users", usersRouter);
 
 app.use("/ping", (req, res) => {
-  res.status(200).send("pong!");
+  res.status(200).send({ success: true, data: "pong!" });
 });
 
 app.listen(port, () => {

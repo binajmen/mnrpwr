@@ -1,4 +1,5 @@
-import type { V2_MetaFunction } from "@remix-run/node";
+import { json, type V2_MetaFunction } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 import { Button } from "ui";
 
 export const meta: V2_MetaFunction = () => {
@@ -8,10 +9,23 @@ export const meta: V2_MetaFunction = () => {
   ];
 };
 
+export async function loader() {
+  const res = await fetch("http://localhost:8080/ping").then((res) =>
+    res.json()
+  );
+
+  console.log({ res });
+
+  return json({ res });
+}
+
 export default function Index() {
+  const { res } = useLoaderData<typeof loader>();
+
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <h1>Welcome to Remix</h1>
+      <pre>Response: {JSON.stringify(res, null, 2)}</pre>
       <Button>My shared button</Button>
       <ul>
         <li>
