@@ -11,8 +11,7 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "*": ["node_modules/*"],
-      "~/*": ["src/*"]
+      "*": ["node_modules/*"]
     }
   },
   "exclude": ["node_modules", "dist", "drizzle"],
