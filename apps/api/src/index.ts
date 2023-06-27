@@ -11,18 +11,18 @@ import morgan from "morgan";
 const app = express();
 const port = 8080;
 
-// Middlewares
+// middlewares
 app.use(cors());
 app.use(helmet());
 app.use(morgan("combined"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Routes
+// routes
 // app.use("/users", users);
 
-app.use("/", (req, res) => {
-  res.status(200).send("ack");
+app.use("/ping", (req, res) => {
+  res.status(200).send("pong!");
 });
 
 app.listen(port, () => {
