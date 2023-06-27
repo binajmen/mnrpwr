@@ -1,6 +1,9 @@
+# fly.toml app configuration file generated for mnrpwr-api on 2023-06-27T11:51:23+02:00
+#
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
-app = "monorepowered-api"
+app = "mnrpwr-api"
 primary_region = "ams"
 
 [env]

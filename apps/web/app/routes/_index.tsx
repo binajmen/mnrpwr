@@ -1,6 +1,7 @@
 import { json, type V2_MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import { Button } from "ui";
+import { Button } from "@mnrpwr/ui";
+import type { User } from "@mnrpwr/types";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -14,7 +15,9 @@ export async function loader() {
     res.json()
   );
 
-  console.log({ res });
+  const user: User = { id: "123", email: "test@mail.com" };
+
+  console.log({ user, res });
 
   return json({ res });
 }

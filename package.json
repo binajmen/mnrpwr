@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "all:build": "pnpm run --parallel -r build",
-    "all:dev": "pnpm run --parallel -r dev"
+    "dev:all": "pnpm run --parallel -r dev",
+    "build:all": "pnpm run --parallel -r build",
+    "start:all": "pnpm run --parallel -r start"
   },
   "keywords": [],
   "author": "Benjamin Decoster",
