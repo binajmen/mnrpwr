@@ -4,7 +4,9 @@
   "description": "A monorepo, batteries included",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "all:build": "pnpm run --parallel -r build",
+    "all:dev": "pnpm run --parallel -r dev"
   },
   "keywords": [],
   "author": "Benjamin Decoster",
